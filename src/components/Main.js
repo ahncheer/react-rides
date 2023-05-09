@@ -108,7 +108,7 @@ function MapShortCut() {
                 <p>이미지 영역</p>
                 <button onClick={event=>{
                     event.preventDefault();
-                    movePage('/map');
+                    movePage('/react-rides/map');
                 }}>바로가기 →</button>
             </div>
         </div>

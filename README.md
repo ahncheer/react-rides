@@ -1,7 +1,7 @@
 0509!!
 
 # 사이트 
-https://ahncheer.github.io/react-page/
+https://ahncheer.github.io/react-rides/
 
 # 명령어
 git config --global --add safe.directory 'C:\Users\amu30\OneDrive\바탕 화면\asw\vscode'

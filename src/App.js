@@ -65,10 +65,10 @@ function Footer() {
 function App() {
   //gnbList
   const gnbList = [
-    {label : 'Main', value : '/react-page/'}, 
-    {label : 'Info', value : '/react-page/info'}, 
-    {label : 'MapShortcut', value : '/react-page/map'},
-    {label : 'Support', value : '/react-page/support'}
+    {label : 'Main', value : '/react-rides/'}, 
+    {label : 'Info', value : '/react-rides/info'}, 
+    {label : 'MapShortcut', value : '/react-rides/map'},
+    {label : 'Support', value : '/react-rides/support'}
   ];
   const movePage = useNavigate();
 
@@ -80,10 +80,10 @@ function App() {
 
       <div className='MainContent'>
         <Routes>
-          <Route path='/react-page/' element={<Main />} />
-          <Route path='/react-page/info' element={<Info />} />
-          <Route path='/react-page/map' element={<MapShortCut />} />
-          <Route path='/react-page/support' element={<Support />} />
+          <Route path='/react-rides/' element={<Main />} />
+          <Route path='/react-rides/info' element={<Info />} />
+          <Route path='/react-rides/map' element={<MapShortCut />} />
+          <Route path='/react-rides/support' element={<Support />} />
         </Routes>
       </div>
 

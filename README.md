@@ -15,6 +15,8 @@ git init
 
 git add .
 
+(git config --global core.autocrlf true)
+
 git commit -m 'message0509'
 
 git push -u origin master

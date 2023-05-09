@@ -1,0 +1,94 @@
+
+/* BannerWrapper */
+.BannerWrapper{
+    width:100%;
+    height: 300px;
+    position: relative;
+}
+.BannerWrapper .c-slide{
+    height: 300px;
+    background-color: rgb(142, 154, 154);
+    padding: 0 100px;
+    border: 1px solid #ddd;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.BannerWrapper .btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 10px;
+    border: 1px solid #FFF;
+    background-color: #ffffff30;
+    cursor: pointer;
+    font-weight: bold;
+}
+.BannerWrapper .btn.swiper-button-disabled{
+    opacity: 0.3;
+}
+.BannerWrapper .btn.prev{
+    left: 10px;
+}
+.BannerWrapper .btn.next{
+    right: 10px;
+}
+
+/* MainPrdWrapper */
+.MainPrdWrapper{
+    position: relative;
+    padding: 50px 100px;
+}
+.MainPrdWrapper .con {
+    border: 1px solid #ddd;
+    padding: 20px;
+    padding-top: 100px;
+    text-align: center;
+}
+.MainPrdWrapper .btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 10px;
+    border: 1px solid #FFF;
+    background-color: #ffffff30;
+    cursor: pointer;
+    font-weight: bold;
+}
+.MainPrdWrapper .btn.swiper-button-disabled{
+    opacity: 0.3;
+}
+.MainPrdWrapper .btn.prev{
+    left: 10px;
+}
+.MainPrdWrapper .btn.next{
+    right: 10px;
+}
+
+/* short-cut */
+.short-cut{
+    width: 100%;
+    height: 300px;
+    background-color: #bec6c6;
+}
+
+.short-cut button{
+    width: 140px;
+    height: 80px;
+
+    position: absolute;
+    top: 150px;
+    right: 20px;
+
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #8e8e92;
+    cursor: pointer;
+}

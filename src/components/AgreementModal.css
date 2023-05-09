@@ -1,0 +1,30 @@
+.modal-wrapper .title{
+    padding: 20px 10px;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+.modal-wrapper .content{
+    padding: 20px 10px;
+}
+.modal-wrapper .content p{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.25;
+    color: #575757;
+
+}
+.modal-wrapper .close-btn{
+    height: 40px;
+    padding: 10px 40px;
+    margin: 30px auto 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.modal-wrapper .close-btn:hover{
+    background-color: #575757;
+    color: #FFF;
+}

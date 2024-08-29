@@ -105,7 +105,7 @@ function MapShortCut() {
     return (
         <div className='short-cut'>
             <div className='con layout'>
-                <p>이미지 영역</p>
+                <p></p>
                 <button onClick={event=>{
                     event.preventDefault();
                     movePage('/react-rides/map');

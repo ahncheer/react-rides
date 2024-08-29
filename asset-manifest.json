@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-rides/static/css/main.94d8adba.css",
-    "main.js": "/react-rides/static/js/main.b3b45080.js",
+    "main.js": "/react-rides/static/js/main.476d7c49.js",
     "static/js/787.16a4ac59.chunk.js": "/react-rides/static/js/787.16a4ac59.chunk.js",
     "index.html": "/react-rides/index.html",
     "static/media/leftArrow.svg": "/react-rides/static/media/leftArrow.992b60758c54d056f46b200e222afeb4.svg",
     "static/media/rightArrow.svg": "/react-rides/static/media/rightArrow.dc5283e250dc5b3eba42026722b8f01c.svg",
     "main.94d8adba.css.map": "/react-rides/static/css/main.94d8adba.css.map",
-    "main.b3b45080.js.map": "/react-rides/static/js/main.b3b45080.js.map",
+    "main.476d7c49.js.map": "/react-rides/static/js/main.476d7c49.js.map",
     "787.16a4ac59.chunk.js.map": "/react-rides/static/js/787.16a4ac59.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.94d8adba.css",
-    "static/js/main.b3b45080.js"
+    "static/js/main.476d7c49.js"
   ]
 }

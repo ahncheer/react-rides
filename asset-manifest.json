@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-rides/static/css/main.200a6928.css",
-    "main.js": "/react-rides/static/js/main.1bba463e.js",
+    "main.css": "/react-rides/static/css/main.fb19488c.css",
+    "main.js": "/react-rides/static/js/main.0f46963b.js",
     "static/js/787.16a4ac59.chunk.js": "/react-rides/static/js/787.16a4ac59.chunk.js",
     "index.html": "/react-rides/index.html",
     "static/media/leftArrow.svg": "/react-rides/static/media/leftArrow.992b60758c54d056f46b200e222afeb4.svg",
     "static/media/rightArrow.svg": "/react-rides/static/media/rightArrow.dc5283e250dc5b3eba42026722b8f01c.svg",
-    "main.200a6928.css.map": "/react-rides/static/css/main.200a6928.css.map",
-    "main.1bba463e.js.map": "/react-rides/static/js/main.1bba463e.js.map",
+    "main.fb19488c.css.map": "/react-rides/static/css/main.fb19488c.css.map",
+    "main.0f46963b.js.map": "/react-rides/static/js/main.0f46963b.js.map",
     "787.16a4ac59.chunk.js.map": "/react-rides/static/js/787.16a4ac59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.200a6928.css",
-    "static/js/main.1bba463e.js"
+    "static/css/main.fb19488c.css",
+    "static/js/main.0f46963b.js"
   ]
 }

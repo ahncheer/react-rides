@@ -16,7 +16,7 @@ p {
 header{
   height: 70px;
   display: flex;
-  background-color: aliceblue;
+  background-color: #c3c3c3;
   align-items: center;
   justify-content: center;
 }
@@ -27,6 +27,7 @@ header ul{
   justify-content: center;
 }
 header ul li{
+  padding: 10px;
   cursor: pointer;
 }
 /* */

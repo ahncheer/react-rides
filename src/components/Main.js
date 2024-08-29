@@ -6,7 +6,7 @@ import './Main.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
-import SwiperCore, { Navigation,  Autoplay} from 'swiper';
+import SwiperCore, { Navigation,  Autoplay, Pagination} from 'swiper';
 
 import { ReactComponent as LeftArrow } from '../icon/leftArrow.svg';
 import { ReactComponent as RightArrow } from '../icon/rightArrow.svg';
@@ -22,32 +22,46 @@ const MainBanner = () =>{
     const [swiper, setSwiper] = useState(null);
     const navPrev = useRef(null);
     const navNext = useRef(null);
+    const navPaging = useRef(null);
 
-    SwiperCore.use([Navigation, Autoplay]);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    SwiperCore.use([Navigation, Autoplay, Pagination]);
     const param = {
         navigation: {
             prevEl: navPrev.current,
             nextEl: navNext.current,
+        },
+        autoplay : {
+            delay: 3000
+        },
+        pagination: {
+            el: navPaging.current,
+            clickable: true,
+            type: "bullets",
         },
         onSwiper : setSwiper,
     }
     // autoplay : {delay: 5000},
 
     return <div className="BannerWrapper">
-                <Swiper {...param} ref={setSwiper}>
+                <Swiper {...param} ref={setSwiper} onSlideChange={(e) => setActiveIndex(e.activeIndex)}>
                     {fruitList.map((item, idx) => {
                         return (
-                            <SwiperSlide>
-                                <div class="c-slide">
-                                    <p>{item.title}</p>
-                                    <p>{item.content}</p>
+                            <SwiperSlide key={idx}>
+                                <div className={`description-box ${idx === activeIndex ? 'active c-slide' : 'c-slide'}`}>
+                                    <div className="s-content">
+                                        <p>{item.title}</p>
+                                        <p>{item.content}</p>
+                                    </div>
                                 </div>
                             </SwiperSlide>
                         );
                     })}
                 </Swiper>
-                <div ref={navPrev} className="btn prev">prev</div>
-                <div ref={navNext} className="btn next">next</div>
+                <div ref={navPaging} className="page swiper-pagination"></div>
+                {/* <div ref={navPrev} className="btn prev">prev</div>
+                <div ref={navNext} className="btn next">next</div> */}
         </div>
 
 }

@@ -135,3 +135,74 @@
 .short-cut button:hover{
     background-color: #585864;
 }
+
+
+/* support-wrap */
+
+.support-wrap {
+    max-width: 1080px;
+    margin: 80px auto;
+    width: 100%;
+}
+.support-wrap .title-wrap .sp-title{
+	font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.support-wrap .title-wrap {
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+.support-wrap .sup-btn-wrap{
+	display: flex;
+    gap: 20px;
+	position: relative;
+    margin: 0;
+}
+.support-wrap .sup-btn-wrap .sup-title{
+	min-width: 100px;
+	height: fit-content;
+	font-size: 16px;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+    list-style: none;
+}
+.support-wrap .sup-btn-wrap .sup-title + .sup-title:before{
+	content: '';
+	position: absolute;
+	left: -10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1px;
+	height: 80%;
+	background-color: #ccc;
+}
+.support-wrap .active{
+	font-weight: bold;
+}
+
+.support-wrap .content-wrap{
+	padding-top: 20px;
+}
+.support-wrap .left-area {
+    width: 20%;
+    height: 300px;
+}
+.support-wrap .con {
+    display: flex;
+}
+.support-wrap .right-area {
+    width: 80%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+.support-wrap  .subtitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+

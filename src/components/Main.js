@@ -49,7 +49,7 @@ const MainBanner = () =>{
                     {fruitList.map((item, idx) => {
                         return (
                             <SwiperSlide key={idx}>
-                                <div className={`description-box ${idx === activeIndex ? 'active c-slide' : 'c-slide'}`}>
+                                <div className={`description-box c-slide ${idx === activeIndex ? 'active ' : ''}`}>
                                     <div className="s-content">
                                         <p>{item.title}</p>
                                         <p>{item.content}</p>
@@ -128,6 +128,60 @@ function MapShortCut() {
         </div>
     )
 }
+function SubInfo(){
+    // const movePage = useNavigate();
+    const supportData = [
+            {
+                name : 'FAQ', 
+                des: '1914 translation by H. Rackham', 
+                link : '/faq',
+                bgColor: {backgroundColor: '#ddd'}
+            },
+            {
+                name : 'Contact Us', 
+                des: 'Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC', 
+                link : '/contactus',
+                bgColor: {backgroundColor: '#eee'}
+            },
+        ];
+        const [clickedItem, setClickedItem] = useState(0);
+        const [supSelected, setSupSelected] = useState(supportData[0]);
+        
+        function clickSupport(e){
+            let idx = e.currentTarget.dataset.idx;
+            console.log('idx : ', idx);
+
+            if(idx >= 0){
+                setClickedItem(parseInt(idx));
+                setSupSelected(supportData[idx]);
+                console.log('supSelected : ', supSelected);
+            }
+        }
+    return (
+        <div className="support-wrap">
+            <div className="title-wrap">
+                <h4 className="sp-title">Support</h4>
+                <ul className="sup-btn-wrap">
+                {supportData.map((item, idx) => {
+                return (
+                        <li key={item.name} className={`sup-title ${idx === clickedItem ? "active" : ""}`} data-idx={idx} 
+                        onClick={clickSupport} >{item.name}</li>
+                        );
+                    })}
+                </ul>
+            </div>
+            <div className="content-wrap">
+                <div className="con">
+                    <div className="left-area" style={supSelected.bgColor}></div>
+                    <div className="right-area">
+                        <h4 className="subtitle">{supSelected.name}</h4>
+                        <p className="des">{supSelected.des}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 // ==== Main ====
 function Main(){
@@ -135,6 +189,7 @@ function Main(){
         <MainBanner></MainBanner>
         <MainPrd></MainPrd>
         <MapShortCut></MapShortCut>
+        <SubInfo></SubInfo>
     </div>
 }
 export default Main;

@@ -99,7 +99,7 @@ function MainPrd() {
         <Swiper {...param} ref={setSwiper}>
             {mainPrdList.map((item, idx) => {
                 return (
-                    <SwiperSlide>
+                    <SwiperSlide key={item.label}>
                         <div className='con'>
                             <p>{item.label}</p>
                         </div>

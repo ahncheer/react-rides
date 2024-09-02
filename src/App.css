@@ -30,6 +30,59 @@ header ul li{
   padding: 10px;
   cursor: pointer;
 }
+/* header - mobile */
+.is-mo .pc-header{
+  display: none;
+}
+.is-pc .mo-header{
+  display: none;
+}
+.is-mo .mo-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.is-mo .mo-header .top {
+  display: flex;
+  padding: 0px 60px;
+  gap: 20px;
+  height: 70px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.is-mo .mo-header .top p:first-child {
+  margin-right: auto;
+}
+
+.is-mo .mo-header .top p {
+  padding: 10px 20px;
+  background-color: #00000014;
+  border-radius: 10px;
+  height: fit-content;
+}
+.is-mo .mo-header .con-open{display: block;}
+.is-mo .mo-header .con-close{display: none;}
+.is-mo .mo-header.is-active .con-open{display: none;}
+.is-mo .mo-header.is-active .con-close{display: block;}
+
+.is-mo .mo-header .mo-h-con {
+  display: none;
+}
+.is-mo .mo-header.is-active .mo-h-con {
+  height: calc(100vh - 70px);
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 70px;
+  background-color: #ddd;
+  z-index: 9999;
+}
+
 /* */
 .MainContent{
   min-height: calc(100vh - 250px);

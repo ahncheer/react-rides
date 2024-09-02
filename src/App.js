@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 //import Modal from 'react-modal';
 import AgreementModal from './components/AgreementModal';
@@ -14,6 +14,10 @@ import Support from './components/Support';
 /* ---- Header ---- */
 function Header(props) {
   const lis = [];
+  const [moOpen, setMoOpen] = useState(false);
+  const [moOpenClass, setMoOpenClass] = useState('mo-header');
+
+
   for(let i = 0; i < props.topics.length; i++){
     let t = props.topics[i];
     lis.push(<li id={t.value} key={t.value} onClick={event=>{
@@ -21,8 +25,25 @@ function Header(props) {
       props.onChangeMode(event.target.id);
     }}>{t.label}</li>);
   }
+
+  const moOpenClick = e =>{
+    let newMoOpen = !moOpen;
+    console.log('newMoOpen : ', newMoOpen);
+    setMoOpen(newMoOpen);
+    let newClass = newMoOpen ? 'mo-header is-active' : 'mo-header';
+    console.log('newClass:', newClass);
+    setMoOpenClass(newClass);
+  }
   return <header>
-    <ul>{lis}</ul>
+    <ul className="pc-header">{lis}</ul>
+    <ul className={moOpenClass}>
+      <div className='top'>
+        <p>Logo</p>
+        <p onClick={moOpenClick} className='con-open'>▤</p>
+        <p onClick={moOpenClick} className='con-close'>X</p>
+      </div>
+      <div className='mo-h-con'></div>
+    </ul>
   </header>
 }
 
@@ -72,8 +93,35 @@ function App() {
   ];
   const movePage = useNavigate();
 
+  // resize test
+  let headerClass = '';
+  const [windowSize, setWindowSize] = useState({
+      width : undefined,
+      height: undefined,
+  });
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+          const handleResize = () => {
+              setWindowSize({
+                  width: window.innerWidth,
+                  height: window.innerHeight,
+              });
+          }
+          window.addEventListener("resize", handleResize);
+          handleResize();
+          return () => window.removeEventListener("resize", handleResize);
+      } else {
+          return () => window.removeEventListener("resize", () => {
+              return null
+          });
+      }
+  }, []); 
+  // console.log('windowSize : ', windowSize);
+    headerClass = (windowSize.width < 1024) ? 'AppWrapper is-mo' : 'AppWrapper is-pc';
+    console.log('headerClass  :', headerClass);
+
   return (
-    <div className="AppWrapper">
+    <div className={headerClass}>
       <Header topics={gnbList} onChangeMode={(value)=>{
         movePage(value);
       }}></Header>

@@ -64,7 +64,7 @@ function Footer() {
   };
   return <footer className='footer-wrap'>
       <div className='f-top'>
-        <p onClick={ e =>{ setModalIsOpen(true); setModalIdx(0); }}>개인정보처리방침 test2</p>
+        <p onClick={ e =>{ setModalIsOpen(true); setModalIdx(0); }}>개인정보 처리방침</p>
         <p onClick={ e =>{ setModalIsOpen(true); setModalIdx(1); }}>이용약관</p>
         <p onClick={ e =>{ setModalIsOpen(true); setModalIdx(2); }}>공지사항</p>
       </div>

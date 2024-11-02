@@ -17,7 +17,7 @@ git add .
 
 (git config --global core.autocrlf true)
 
-git commit -m 'message0902-changeReactRouter'
+git commit -m '11/02 10:44 → node_modules 재다운로드'
 
 git push -u origin master
 
